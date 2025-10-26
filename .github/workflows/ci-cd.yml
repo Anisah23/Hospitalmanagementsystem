@@ -1,0 +1,42 @@
+name: CI/CD - Hospital Management System
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies and build frontend
+        run: |
+          cd hospital-management-frontend
+          npm ci
+          npm run build
+          mkdir -p ../hospital-management-backend/static
+          cp -r dist/* ../hospital-management-backend/static/
+
+      - name: Install backend dependencies
+        run: |
+          cd hospital-management-backend
+          pip install -r requirements.txt
+
+      - name: Deploy to DigitalOcean Droplet
+        env:
+          DROPLET_IP: ${{ secrets.DROPLET_IP }}
+          DROPLET_USER: root
+        run: bash deploy.sh
