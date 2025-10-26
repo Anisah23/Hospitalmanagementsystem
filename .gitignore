@@ -1,0 +1,77 @@
+# ------------------------------
+# GENERAL
+# ------------------------------
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# ------------------------------
+# GIT
+# ------------------------------
+.git/
+
+
+# ------------------------------
+# ENVIRONMENT & SECRETS
+# ------------------------------
+.env
+.env.*
+secrets/
+*.key
+*.pem
+id_rsa
+id_rsa.pub
+
+# ------------------------------
+# FRONTEND (React)
+# ------------------------------
+hospital-management-frontend/node_modules/
+hospital-management-frontend/.cache/
+hospital-management-frontend/build/
+hospital-management-frontend/dist/
+hospital-management-frontend/.env.local
+hospital-management-frontend/.parcel-cache/
+hospital-management-frontend/.next/
+hospital-management-frontend/.nuxt/
+hospital-management-frontend/public/
+
+# ------------------------------
+# BACKEND (Python/Flask)
+# ------------------------------
+hospital-management-backend/__pycache__/
+hospital-management-backend/*.pyc
+hospital-management-backend/*.pyo
+hospital-management-backend/*.pyd
+hospital-management-backend/instance/
+hospital-management-backend/.webassets-cache/
+hospital-management-backend/env/
+hospital-management-backend/venv/
+hospital-management-backend/.venv/
+hospital-management-backend/.mypy_cache/
+hospital-management-backend/.pytest_cache/
+hospital-management-backend/migrations/__pycache__/
+hospital-management-backend/*.db
+hospital-management-backend/*.sqlite3
+
+# ------------------------------
+# CI/CD
+# ------------------------------
+.github/
+.dockerignore
+
+# ------------------------------
+# IDE SETTINGS
+# ------------------------------
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.suo
+*.sw?
