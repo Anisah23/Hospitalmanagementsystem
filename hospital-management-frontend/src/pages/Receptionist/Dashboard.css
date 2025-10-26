@@ -1,0 +1,237 @@
+.receptionist-dashboard {
+  background: #1e1e2f;
+  min-height: calc(100vh - 60px);
+  padding: 20px;
+  color: #ccd6f6;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-y: auto;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.header-icon {
+  width: 48px;
+  height: 48px;
+  background: #ffa057;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.header-content h1 {
+  color: #ccd6f6;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+}
+
+.header-content p {
+  color: #a0aec0;
+  font-size: 14px;
+  margin: 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: #2a2d47;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.stat-card:hover {
+  background: #323659;
+  transform: translateY(-2px);
+}
+
+.stat-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.stat-icon.orange {
+  background: #ffa057;
+  color: white;
+}
+
+.stat-content {
+  flex: 1;
+}
+
+.stat-value {
+  color: #ccd6f6;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+}
+
+.stat-label {
+  color: #a0aec0;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.queue-section,
+.billing-section {
+  margin-bottom: 24px;
+}
+
+.queue-card,
+.billing-card {
+  background: #2a2d47;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.queue-card h3,
+.billing-card h3 {
+  color: #ccd6f6;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+}
+
+.queue-header,
+.billing-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid #3a3f5c;
+  margin-bottom: 12px;
+}
+
+.billing-header {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.queue-header span,
+.billing-header span {
+  color: #a0aec0;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.queue-row,
+.billing-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid #3a3f5c;
+  align-items: center;
+}
+
+.billing-row {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.queue-row:last-child,
+.billing-row:last-child {
+  border-bottom: none;
+}
+
+.queue-department,
+.queue-patient,
+.patient-name,
+.department-name,
+.amount {
+  color: #ccd6f6;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.queue-status {
+  display: flex;
+  align-items: center;
+}
+
+.status-bar {
+  width: 40px;
+  height: 6px;
+  border-radius: 3px;
+}
+
+.status-bar.orange {
+  background: #ffa057;
+}
+
+.status-badge {
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.status-badge.pending {
+  background: #ffa057;
+}
+
+.status-badge.paid {
+  background: #4ade80;
+}
+
+.no-data {
+  text-align: center;
+  padding: 40px 20px;
+  color: #a0aec0;
+}
+
+.no-data p {
+  margin: 0;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .receptionist-dashboard {
+    padding: 16px;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .header-content h1 {
+    font-size: 20px;
+  }
+  
+  .queue-header,
+  .billing-header,
+  .queue-row,
+  .billing-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}

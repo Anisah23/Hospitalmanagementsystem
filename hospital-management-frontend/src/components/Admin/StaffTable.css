@@ -1,0 +1,290 @@
+.staff-table-container {
+  background: #2a2d47;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  overflow: hidden;
+  border: 1px solid #2a2d47;
+}
+
+.table-header {
+  padding: 20px 20px 0px 20px;
+  border-bottom: none;
+  background: #2a2d47;
+}
+
+.table-header h3 {
+  margin: 0 0 4px 0;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.table-header p {
+  margin: 0;
+  color: #ffa057;
+  font-size: 13px;
+}
+
+.staff-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #2a2d47;
+}
+
+.staff-table th {
+  background: #2a2d47;
+  padding: 16px 20px;
+  text-align: left;
+  font-weight: 600;
+  color: #ffa057;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #1e1e2f;
+  border-top: none;
+}
+
+.staff-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid #2a2d47;
+  font-size: 14px;
+  color: #e8e9ea;
+  background: #1e1e2f;
+}
+
+.staff-row {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.staff-row:hover {
+  background: #2a2d47 !important;
+}
+
+.staff-row:nth-child(even) {
+  background: #1a1a2e;
+}
+
+.staff-row:nth-child(even):hover {
+  background: #2a2d47 !important;
+}
+
+.staff-name {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.department-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.department-badge.purple {
+  background: #e8d5ff;
+  color: #6f42c1;
+}
+
+.department-badge.blue {
+  background: #cce7ff;
+  color: #007bff;
+}
+
+.department-badge.green {
+  background: #d4edda;
+  color: #28a745;
+}
+
+.department-badge.orange {
+  background: #fff3cd;
+  color: #fd7e14;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status-badge.green {
+  background: #d4edda;
+  color: #28a745;
+}
+
+.status-badge.yellow {
+  background: #fff3cd;
+  color: #ffc107;
+}
+
+.status-badge.gray {
+  background: #f8f9fa;
+  color: #6c757d;
+}
+
+.role-cell {
+  text-transform: capitalize;
+  color: #e8e9ea;
+  font-weight: 500;
+}
+
+.empty-state {
+  padding: 60px 20px;
+  text-align: center;
+  color: #ffa057;
+  background: #1e1e2f;
+}
+
+.empty-state p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.loading-spinner {
+  padding: 60px 20px;
+  text-align: center;
+  color: #ffa057;
+  font-size: 16px;
+  background: #1e1e2f;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #1e1e2f;
+  border-radius: 12px;
+  width: 500px;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid #2a2d47;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  border-bottom: 1px solid #2a2d47;
+  background: #1e1e2f;
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #ffa057;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+  background: #2a2d47;
+  color: #ffffff;
+}
+
+.modal-body {
+  padding: 24px;
+}
+
+.staff-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #2a2d47;
+}
+
+.staff-detail:last-child {
+  border-bottom: none;
+}
+
+.staff-detail label {
+  font-weight: 600;
+  color: #ffa057;
+  min-width: 140px;
+}
+
+.staff-detail span {
+  color: #e8e9ea;
+  text-align: right;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .staff-table {
+    font-size: 12px;
+  }
+  
+  .staff-table th,
+  .staff-table td {
+    padding: 12px 8px;
+  }
+  
+  .table-header {
+    padding: 16px;
+  }
+  
+  .department-badge,
+  .status-badge {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+  
+  .modal-content {
+    width: 95vw;
+    margin: 20px;
+  }
+  
+  .modal-header,
+  .modal-body {
+    padding: 16px;
+  }
+  
+  .staff-detail {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  
+  .staff-detail label {
+    min-width: auto;
+  }
+  
+  .staff-detail span {
+    text-align: left;
+  }
+}

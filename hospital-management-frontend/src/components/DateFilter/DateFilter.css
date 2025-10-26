@@ -1,0 +1,81 @@
+.date-filter {
+  background: #2a2d47;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  background: #323659;
+  color: #a0aec0;
+  border: 1px solid #3a3f5c;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.filter-btn:hover {
+  background: #3a3f5c;
+  color: #ccd6f6;
+}
+
+.filter-btn.active {
+  background: #ffa057;
+  color: white;
+  border-color: #ffa057;
+}
+
+.custom-range {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.custom-range input {
+  padding: 8px 12px;
+  background: #1e1e2f;
+  border: 1px solid #3a3f5c;
+  border-radius: 6px;
+  color: #ccd6f6;
+  font-size: 14px;
+}
+
+.custom-range input:focus {
+  outline: none;
+  border-color: #ffa057;
+}
+
+.apply-btn {
+  padding: 8px 16px;
+  background: #ffa057;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.apply-btn:hover {
+  background: #e8904a;
+}
+
+@media (max-width: 768px) {
+  .filter-buttons {
+    flex-wrap: wrap;
+  }
+  
+  .custom-range {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

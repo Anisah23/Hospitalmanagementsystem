@@ -1,0 +1,135 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "System Administrator",
+      "email": "admin@hospital.com",
+      "password_hash": "scrypt:32768:8:1$Q4pKL46qTgjGGbc6$bae416e007ee52f942d6775c79eb7b1dbd6e82f608f9803f172902a53981e318e042eecb3257996a87f0421b6ef47ff7553b2d7d9f1c46feda4c21927762d85c",
+      "role": "admin",
+      "department": null,
+      "created_at": "2025-10-11 10:18:59.366287",
+      "is_active": 1,
+      "schedule": null,
+      "status": "active"
+    },
+    {
+      "id": 7,
+      "name": "tasneem",
+      "email": "tasneem@hospital.com",
+      "password_hash": "scrypt:32768:8:1$AiQeSKmCpLwEau5W$6df543ce72a2c029e647d9cf146c658ebce05df5aa106994c63507e25f496a406c4862be0b9f7b50f7bd50876a854c6d22eb184c46617404054b1ff912dd5142",
+      "role": "doctor",
+      "department": "ent",
+      "created_at": "2025-10-20 08:14:59.861743",
+      "is_active": 1,
+      "schedule": "10:00 AM - 5:00 PM",
+      "status": "active"
+    },
+    {
+      "id": 8,
+      "name": "anisah",
+      "email": "anisah@hospital.com",
+      "password_hash": "scrypt:32768:8:1$r2PxMEWf7AVIgFiP$fb0b767c40ce481a09e4e7b0b4baef9077473e7b2b73b34eee2680fc2667c3e67e267fe0e4eb831bb751debbdb6706357ae8d150d550793e1466f97b411b57a7",
+      "role": "receptionist",
+      "department": "reception",
+      "created_at": "2025-10-20 08:17:08.748962",
+      "is_active": 1,
+      "schedule": "10:00 AM - 5:00 PM",
+      "status": "active"
+    },
+    {
+      "id": 9,
+      "name": "hafsa",
+      "email": "hafsa@hospital.com",
+      "password_hash": "scrypt:32768:8:1$XwNCg9DPnTNsg9SB$66016886c3c84749f5326060a107488e7fc2d0a960faa66a9d262e8b46b3bdc3b30931994086044b358a5b21d20d331841eac5b568646c7bf4853e8f45acc3b8",
+      "role": "doctor",
+      "department": "eye",
+      "created_at": "2025-10-25 06:45:48.820701",
+      "is_active": 1,
+      "schedule": "9:00 AM - 5:00 PM",
+      "status": "active"
+    }
+  ],
+  "patient": [
+    {
+      "id": 1,
+      "name": "kh",
+      "age": 23,
+      "gender": "male",
+      "phone": "878878888878",
+      "address": "langata",
+      "department": "eye",
+      "created_at": "2025-10-25 06:46:29.530830"
+    },
+    {
+      "id": 2,
+      "name": "aisha",
+      "age": 21,
+      "gender": "female",
+      "phone": "28911--192929",
+      "address": "slkslk",
+      "department": "eye",
+      "created_at": "2025-10-25 10:30:04.306326"
+    }
+  ],
+  "appointment": [
+    {
+      "id": 1,
+      "patient_id": 1,
+      "doctor_id": 9,
+      "date": "2025-10-26",
+      "time": "10:30:00.000000",
+      "status": "scheduled",
+      "created_at": "2025-10-25 06:47:03.290194"
+    }
+  ],
+  "consultation": [
+    {
+      "id": 1,
+      "patient_id": 2,
+      "doctor_id": 9,
+      "symptoms": "hdhh",
+      "diagnosis": "dhhhh",
+      "prescription": "dhhh",
+      "tests": "{\"od_visual_acuity\":\"cjdjncjjn\",\"os_visual_acuity\":\"cnjcdjjdj\",\"od_cornea\":\"djj\",\"os_cornea\":\"d\",\"od_lens\":\"djj\",\"os_lens\":\"djj\",\"od_retina\":\"djj\",\"os_retina\":\"djj\",\"od_pressure\":\"djj\",\"os_pressure\":\"djj\",\"refraction\":{\"right\":{\"autorefraction\":\"dj\",\"retinoscopy\":\"dj\",\"sphere\":\"dj\",\"cylinder\":\"dh\",\"axis\":\"dh\",\"nearRefraction\":\"dh\",\"cycloplegicRefraction\":\"dj\",\"finalRx\":\"dh\"},\"left\":{\"autorefraction\":\"dj\",\"retinoscopy\":\"dh\",\"sphere\":\"dh\",\"cylinder\":\"dh\",\"axis\":\"dhd\",\"nearRefraction\":\"dh\",\"cycloplegicRefraction\":\"dh\",\"finalRx\":\"ddh\"},\"duochrome\":\"Red clearer\",\"binocularBalance\":\"Balanced\",\"nearAddition\":\"dhdhhdh\",\"cycloplegicAgent\":\"Cyclopentolate\",\"cycloplegicTime\":\"dhdh\",\"interpupillaryDistance\":\"5\",\"prescriptionType\":\"Distance\",\"remarks\":\"dhhd\"}}",
+      "notes": "dhdhh",
+      "created_at": "2025-10-25 11:37:24.409667"
+    }
+  ],
+  "billing": [
+    {
+      "id": 1,
+      "consultation_id": 1,
+      "patient_id": 2,
+      "amount": 50.0,
+      "status": "pending",
+      "payment_method": "cash",
+      "created_at": "2025-10-25 11:37:24.418528"
+    }
+  ],
+  "vital_signs": [
+    {
+      "id": 1,
+      "patient_id": 2,
+      "blood_pressure_systolic": null,
+      "blood_pressure_diastolic": null,
+      "heart_rate": 8,
+      "temperature": 0.7,
+      "weight": 17.0,
+      "height": 19.0,
+      "oxygen_saturation": 13,
+      "recorded_by": 9,
+      "created_at": "2025-10-25 11:36:02.474236",
+      "blood_pressure": "120"
+    }
+  ],
+  "queue": [
+    {
+      "id": 1,
+      "patient_id": 1,
+      "doctor_id": 9,
+      "status": "in_progress",
+      "priority": 0,
+      "created_at": "2025-10-25 06:47:05.841957"
+    }
+  ]
+}

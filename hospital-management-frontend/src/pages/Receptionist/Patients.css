@@ -1,0 +1,128 @@
+.patients-page {
+  background: #1e1e2f;
+  min-height: calc(100vh - 60px);
+  padding: 20px;
+  color: #ccd6f6;
+}
+
+.page-header {
+  margin-bottom: 24px;
+}
+
+.page-header h2 {
+  color: #ccd6f6;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.page-header p {
+  color: #8892b0;
+  font-size: 14px;
+  margin: 0;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 16px;
+  background: #2a2d47;
+  border: 1px solid #3a3f5c;
+  border-radius: 8px;
+  color: #ccd6f6;
+  font-size: 14px;
+}
+
+.search-bar input::placeholder {
+  color: #8892b0;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: #ff7070;
+}
+
+.patients-table {
+  background: #2a2d47;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr 1.5fr 1.5fr 1.5fr;
+  gap: 16px;
+  padding: 16px 20px;
+  background: #323659;
+  border-bottom: 1px solid #3a3f5c;
+}
+
+.table-header span {
+  color: #8892b0;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.table-body {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr 1.5fr 1.5fr 1.5fr;
+  gap: 16px;
+  padding: 16px 20px;
+  border-bottom: 1px solid #3a3f5c;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.table-row:hover {
+  background: #323659;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.patient-name {
+  color: #ccd6f6;
+  font-weight: 600;
+}
+
+.department {
+  color: #ffa057;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.last-session {
+  color: #a0aec0;
+}
+
+@media (max-width: 768px) {
+  .patients-page {
+    padding: 16px;
+  }
+  
+  .table-header,
+  .table-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  
+  .table-header span {
+    display: none;
+  }
+  
+  .table-row {
+    flex-direction: column;
+    display: flex;
+  }
+}

@@ -1,0 +1,127 @@
+.my-patients {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #1e1e2f;
+  min-height: 100vh;
+  color: #ccd6f6;
+}
+
+.my-patients h2 {
+  color: #ccd6f6;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+.search-bar {
+  margin-bottom: 30px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 15px 20px;
+  border: 1px solid #3a3f5c;
+  border-radius: 25px;
+  font-size: 16px;
+  background: #2a2d47;
+  color: #ccd6f6;
+  transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: #ffa057;
+}
+
+.patients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.patient-card {
+  background: #2a2d47;
+  padding: 25px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.patient-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #ffa057;
+}
+
+.patient-card:hover {
+  transform: translateY(-5px);
+  background: #323659;
+}
+
+.patient-card h3 {
+  color: #ccd6f6;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  border-bottom: 2px solid #3a3f5c;
+  padding-bottom: 10px;
+}
+
+.patient-card p {
+  margin: 10px 0;
+  color: #ccd6f6;
+  font-size: 14px;
+  padding: 8px 12px;
+  background: #323659;
+  border-radius: 8px;
+  border-left: 3px solid #ffa057;
+}
+
+.patient-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.patient-actions button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.patient-actions button:first-child {
+  background: #ffa057;
+  color: white;
+}
+
+.patient-actions button:first-child:hover {
+  background: #e8904a;
+}
+
+.patient-actions button:last-child {
+  background: #ffa057;
+  color: white;
+}
+
+.patient-actions button:last-child:hover {
+  background: #e8904a;
+}
+
+@media (max-width: 768px) {
+  .patients-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .patient-actions {
+    flex-direction: column;
+  }
+}
