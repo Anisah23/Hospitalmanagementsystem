@@ -24,7 +24,10 @@ jobs:
 
       - name: Install dependencies and build frontend
         run: |
+          ls -la hospital-management-frontend/
           cd hospital-management-frontend
+          pwd
+          ls -la
           npm ci --prefer-offline --no-audit
           npm run build
           mkdir -p ../hospital-management-backend/static
