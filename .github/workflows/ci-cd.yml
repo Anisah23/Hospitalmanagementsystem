@@ -45,4 +45,4 @@ jobs:
         env:
           DROPLET_IP: ${{ secrets.DROPLET_IP }}
           DROPLET_USER: root
-        run: bash deploy.sh
+        run: bash scripts/deploy.sh
