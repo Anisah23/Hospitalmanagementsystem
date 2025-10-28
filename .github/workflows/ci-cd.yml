@@ -28,7 +28,7 @@ jobs:
           npm ci --prefer-offline --no-audit
           npm run build
           mkdir -p ../hospital-management-backend/static
-          cp -r dist/* ../hospital-management-backend/static/
+          cp -r build/* ../hospital-management-backend/static/
 
       - name: Install backend dependencies
         run: |
