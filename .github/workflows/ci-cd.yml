@@ -11,9 +11,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          submodules: false
-          fetch-depth: 1
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -25,13 +22,13 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Install dependencies and build frontend
+      - name: Build frontend
         run: |
           cd hospital-management-frontend
           npm ci --prefer-offline --no-audit
           npm run build
           mkdir -p ../hospital-management-backend/static
-          cp -r build/* ../hospital-management-backend/static/
+          cp -r dist/* ../hospital-management-backend/static/
 
       - name: Install backend dependencies
         run: |
@@ -42,7 +39,8 @@ jobs:
         env:
           DROPLET_IP: ${{ secrets.DROPLET_IP }}
           DROPLET_USER: root
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > private_key.pem
+          echo "$SSH_PRIVATE_KEY" > private_key.pem
           chmod 600 private_key.pem
           bash scripts/deploy.sh
