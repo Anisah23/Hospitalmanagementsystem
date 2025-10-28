@@ -18,7 +18,7 @@ print_error() { echo -e "${RED}[ERROR]${NC} $1"; }
 # --- CONFIG ---
 DROPLET_IP=${DROPLET_IP:-""}
 DROPLET_USER=${DROPLET_USER:-"root"}
-SSH_KEY_PATH=${SSH_KEY_PATH:-"/home/anisah/ssh/digitalocean"}
+SSH_KEY_PATH=${SSH_KEY_PATH:-"private_key.pem"}
 
 # --- DEPLOYMENT ---
 print_status "Starting deployment to DigitalOcean Droplet..."
